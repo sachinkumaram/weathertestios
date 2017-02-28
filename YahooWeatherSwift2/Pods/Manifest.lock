@@ -1,0 +1,29 @@
+PODS:
+  - Alamofire (4.3.0)
+  - FileProvider (0.14.1)
+  - ObjectMapper (2.2.2)
+  - PKHUD (4.2.0)
+  - Realm (2.4.2):
+    - Realm/Headers (= 2.4.2)
+  - Realm/Headers (2.4.2)
+  - RealmSwift (2.4.2):
+    - Realm (= 2.4.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - FileProvider
+  - ObjectMapper (= 2.2.2)
+  - PKHUD
+  - RealmSwift (= 2.4.2)
+
+SPEC CHECKSUMS:
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  FileProvider: 370cf13040e3604f2abac20aac6de4a61b33b5c9
+  ObjectMapper: 9e385c2295bcc4e16eabbcfc85db801442bba545
+  PKHUD: 48af884cf00c2213b0313b739d914e6cab1c0f5e
+  Realm: d27b758e12d62a3371879a065d4c40aa212c5a54
+  RealmSwift: 9556c0fe0f0cfecacfb755ae9e68ff379fc6bead
+
+PODFILE CHECKSUM: 9e4fef4cb9e6004d4780888891dc3316d1e733a3
+
+COCOAPODS: 1.2.0

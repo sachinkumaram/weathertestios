@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YahooWeatherSwift2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0s4-vP-YAH">
+                                <rect key="frame" x="18" y="35" width="148" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="148" id="9Wo-rj-akP"/>
+                                    <constraint firstAttribute="height" constant="21" id="Zlc-at-TGb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gW4-th-Til">
+                                <rect key="frame" x="16" y="64" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ety-6i-7mK">
+                                <rect key="frame" x="114" y="102" width="91" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Bz1-8v-ltb"/>
+                                    <constraint firstAttribute="width" constant="91" id="rB3-0s-s2C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="onSubmit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dgh-hg-olY"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="72" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="L0e-zi-7Bc">
+                                <rect key="frame" x="0.0" y="198" width="320" height="370"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="weathercell" rowHeight="72" id="Q9d-li-F3i" customClass="WeatherTableViewCell" customModule="YahooWeatherSwift2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="72"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q9d-li-F3i" id="XVR-Nd-Lnb">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUO-nk-kMA">
+                                                    <rect key="frame" x="16" y="8" width="60" height="55"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="gle-Q7-icg"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKh-k6-j0J">
+                                                    <rect key="frame" x="257" y="25" width="45" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="6BB-UA-bAg"/>
+                                                        <constraint firstAttribute="width" constant="45" id="jha-dh-O3F"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPb-tA-Bq3">
+                                                    <rect key="frame" x="87" y="8" width="105" height="55"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="55" id="KqP-tq-fIo"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0CZ-w9-T2z">
+                                                    <rect key="frame" x="200" y="25" width="45" height="21"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="PPb-tA-Bq3" secondAttribute="trailing" constant="120" id="FbW-JY-Lp3"/>
+                                                <constraint firstItem="dUO-nk-kMA" firstAttribute="leading" secondItem="XVR-Nd-Lnb" secondAttribute="leadingMargin" constant="8" id="Nad-tV-bvT"/>
+                                                <constraint firstItem="0CZ-w9-T2z" firstAttribute="width" secondItem="uKh-k6-j0J" secondAttribute="width" id="Qba-WB-uGQ"/>
+                                                <constraint firstItem="dUO-nk-kMA" firstAttribute="top" secondItem="XVR-Nd-Lnb" secondAttribute="topMargin" id="bhW-Eb-b1O"/>
+                                                <constraint firstItem="PPb-tA-Bq3" firstAttribute="top" secondItem="XVR-Nd-Lnb" secondAttribute="topMargin" id="ezI-26-02K"/>
+                                                <constraint firstItem="uKh-k6-j0J" firstAttribute="leading" secondItem="0CZ-w9-T2z" secondAttribute="trailing" constant="12" id="fTs-MY-Wlg"/>
+                                                <constraint firstItem="0CZ-w9-T2z" firstAttribute="height" secondItem="uKh-k6-j0J" secondAttribute="height" id="goD-Af-5TH"/>
+                                                <constraint firstItem="PPb-tA-Bq3" firstAttribute="leading" secondItem="dUO-nk-kMA" secondAttribute="trailing" constant="11" id="q1S-zL-equ"/>
+                                                <constraint firstItem="dUO-nk-kMA" firstAttribute="bottom" secondItem="XVR-Nd-Lnb" secondAttribute="bottomMargin" constant="-1" id="qnC-DT-MrU"/>
+                                                <constraint firstItem="0CZ-w9-T2z" firstAttribute="top" secondItem="XVR-Nd-Lnb" secondAttribute="topMargin" constant="17" id="qrc-WE-VcS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="uKh-k6-j0J" firstAttribute="top" secondItem="Q9d-li-F3i" secondAttribute="top" constant="25" id="HPR-rM-25f"/>
+                                            <constraint firstAttribute="trailing" secondItem="uKh-k6-j0J" secondAttribute="trailing" constant="18" id="kKR-x1-dnN"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="dUO-nk-kMA" id="dNa-z5-B2G"/>
+                                            <outlet property="dayTypeLabel" destination="PPb-tA-Bq3" id="iMN-mN-TjC"/>
+                                            <outlet property="highTemperatureLabel" destination="0CZ-w9-T2z" id="RDJ-kF-8Xd"/>
+                                            <outlet property="lowTemperatureLabel" destination="uKh-k6-j0J" id="YKB-r8-fPe"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="EIF-w6-I3m"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="007-hH-s7K"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5y-Hh-D9o">
+                                <rect key="frame" x="16" y="141" width="288" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="AR0-hQ-0CP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="X5y-Hh-D9o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0hR-wS-zWG"/>
+                            <constraint firstItem="Ety-6i-7mK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="82" id="29h-WC-08A"/>
+                            <constraint firstItem="0s4-vP-YAH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="6KH-4o-kEN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="L0e-zi-7Bc" secondAttribute="bottom" id="7zP-Yc-fHY"/>
+                            <constraint firstItem="0s4-vP-YAH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="2" id="CLH-gH-i6s"/>
+                            <constraint firstItem="L0e-zi-7Bc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="178" id="OG1-ua-mvd"/>
+                            <constraint firstItem="gW4-th-Til" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Pot-IH-7ox"/>
+                            <constraint firstItem="gW4-th-Til" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="RTo-zr-rGQ"/>
+                            <constraint firstItem="X5y-Hh-D9o" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="VYM-Sj-7wt"/>
+                            <constraint firstItem="X5y-Hh-D9o" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="121" id="aWM-dX-awQ"/>
+                            <constraint firstAttribute="trailing" secondItem="L0e-zi-7Bc" secondAttribute="trailing" id="gcr-eU-oAD"/>
+                            <constraint firstItem="L0e-zi-7Bc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="n2E-5X-uZa"/>
+                            <constraint firstItem="Ety-6i-7mK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oqJ-ew-SOO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gW4-th-Til" secondAttribute="trailing" id="sWC-4t-GCl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityNameTextField" destination="gW4-th-Til" id="l5g-pR-GUw"/>
+                        <outlet property="forecastTableView" destination="L0e-zi-7Bc" id="Htl-3v-3gv"/>
+                        <outlet property="todayWeatherLabel" destination="X5y-Hh-D9o" id="K7Q-SW-wfO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1168" y="-626"/>
+        </scene>
+    </scenes>
+</document>
